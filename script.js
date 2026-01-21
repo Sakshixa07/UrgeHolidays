@@ -79,3 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+document.querySelectorAll('.traveller-section h2, .contact h2, .testimonials h2, .top-destinations h2')
+.forEach(h => {
+  h.addEventListener('touchstart', () => {
+    h.classList.add('active-tap');
+    setTimeout(() => h.classList.remove('active-tap'), 500); // 0.5s effect
+  });
+});
+
