@@ -1015,3 +1015,14 @@ body {
     transition: all 0.3s ease;
   }
 }
+/* Mobile / tablet tap effect for headings (mimics hover) */
+@media (max-width: 768px) {
+  .traveller-section h2:active,
+  .contact h2:active,
+  .testimonials h2:active,
+  .top-destinations h2:active {
+    color: #0ea5e9;       /* same as desktop hover */
+    transform: scale(1.05); /* slightly bigger like hover */
+    transition: all 0.3s ease;
+  }
+}
