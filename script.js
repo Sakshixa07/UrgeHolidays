@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const response = await fetch(
-        "https://automation.urgeholiday.in/webhook/booking-form",
+        "https://automation.urgeholiday.in/webhook-test/booking-form",
         {
           method: "POST",
           headers: {
