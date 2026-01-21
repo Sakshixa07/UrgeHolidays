@@ -1004,15 +1004,10 @@ body {
   transform: scale(1.05); /* slightly bigger */
 }
 
-/* Mobile / tablet: tap effect to mimic hover */
-@media (max-width: 768px) {
-  .traveller-section h2:active,
-  .contact h2:active,
-  .testimonials h2:active,
-  .top-destinations h2:active {
-    color: #0ea5e9;
-    transform: scale(1.05); /* same scale as desktop */
-    transition: all 0.3s ease;
-  }
+/* Mobile tap animation class */
+.active-tap {
+  color: #0ea5e9 !important;
+  transform: scale(1.05) !important;
+  transition: all 0.3s ease;
 }
 
