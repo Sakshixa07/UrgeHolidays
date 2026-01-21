@@ -97,13 +97,12 @@ const cards = document.querySelectorAll('.card');
 
 cards.forEach(card => {
   card.addEventListener('touchstart', () => {
-    card.style.transform = "scale(1.04)";
-    card.style.boxShadow = "0 15px 30px rgba(0, 119, 182, 0.3)";
-  });
-  card.addEventListener('touchend', () => {
-    card.style.transform = "scale(1)";
-    card.style.boxShadow = "0 8px 20px rgba(0, 0, 0, 0.15)";
+    card.classList.add('active'); // add effect
+    setTimeout(() => {
+      card.classList.remove('active'); // remove after 0.4s
+    }, 400); // 400ms duration
   });
 });
+
 
 
