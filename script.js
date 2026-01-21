@@ -36,3 +36,46 @@ window.addEventListener("scroll", () => {
   }
   prevScrollPos = currentScrollPos;
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("travelForm");
+  const messageBox = document.getElementById("formMessage");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // show loading message
+    messageBox.innerText = "Submitting appointment...";
+    messageBox.style.color = "#2563eb";
+
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      place: form.place.value,
+      phone: form.phone.value,
+    };
+
+    try {
+      const response = await fetch(
+        "http://localhost:5678/webhook/booking-form",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      if (!response.ok) throw new Error("Failed");
+
+      // success
+      messageBox.innerText = "✅ Appointment submitted successfully";
+      messageBox.style.color = "green";
+
+      form.reset();
+    } catch (error) {
+      messageBox.innerText = "❌ Something went wrong. Please try again.";
+      messageBox.style.color = "red";
+    }
+  });
+});
