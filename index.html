@@ -109,13 +109,18 @@
     </div>
     <div class="appointment-card">
       <h2>Plan Your Vacations With Us!!</h2>
-      <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="text" placeholder="Place You Want to Visit" required>
-        <input type="tel" placeholder="Contact Number" required>
-        <button type="submit">Submit</button>
-      </form>
+       <form id="travelForm">
+  <input type="text" name="name" placeholder="Full Name" required>
+
+  <input type="email" name="email" placeholder="Email Address" required>
+
+  <input type="text" name="place" placeholder="Place You Want to Visit" required>
+
+  <input type="tel" name="phone" placeholder="Contact Number" required>
+
+  <button type="submit">Submit</button>
+</form>
+<p id="formMessage" style="margin-top:10px;font-weight:500;"></p>
     </div>
   </div>
 </section>
