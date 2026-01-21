@@ -86,4 +86,11 @@ document.querySelectorAll('.traveller-section h2, .contact h2, .testimonials h2,
     setTimeout(() => h.classList.remove('active-tap'), 500); // 0.5s effect
   });
 });
+document.querySelectorAll('.testimonial-card').forEach(card => {
+  card.addEventListener('touchstart', () => {
+    card.classList.add('active-tap');
+    setTimeout(() => card.classList.remove('active-tap'), 500);
+  });
+});
+
 
